@@ -1,0 +1,212 @@
+<html>
+	<head><title>CALCULAR DE EDAD DE TU PERRO</title></head>
+	<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<style>
+	body{
+		background: #F0F1F0;
+	}
+	 input[type=number],select, textarea {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 9px;
+            resize: vertical;
+        }
+    h1{
+    font-family: 'Questrial', sans-serif;
+    margin-top: 50px;
+	}
+	footer{
+		color: #FFFFFF;
+		margin-top: 20px;
+		background: black;
+		height: 100px;
+	}
+	.img {
+            border-radius: 4px;
+            width: 700px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+     .img2 {
+            border-radius: 4px;
+            width: 900px;
+            height: 500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    .parrafo{
+            color: black;
+            margin-left: 210px;
+            margin-right: 210px;
+            padding: 30px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=button]{
+  background-color: #EA2923;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 230px;
+  margin-top: 15px;
+}
+input[type=button]:hover {
+  background-color: #747687;
+}
+
+.containere {
+  border-radius: 5px;
+  background-color: #EA2923;
+  padding: 20px;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  margin-left: 40px;
+}
+
+.col-75 {
+  
+  width: 70%;
+  margin-top: 6px;
+  margin-left: 180px;
+}
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 15px;
+}
+.col50{
+    margin-left: 120px;
+    margin: 10px;
+    margin-right: 10px;
+    height: 50px;
+    padding: 15px;
+}
+.fila:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.fila{
+	padding: 10px;
+}
+section{
+    background: #FFFFFF;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+	h1{
+		text-align: center;
+	}
+	h2{
+            font-family: 'Questrial', sans-serif;
+            margin-left: 240px;
+            margin-right: 240px;
+
+        }
+    .mimi{
+    		width: 400px;
+            margin-left: 480px;
+            margin-right: 200px;
+    }
+    .p{
+    	font-family: 'Questrial', sans-serif;
+    }
+
+</style>
+<body>
+	<h1>COMO CALCULAR LA EDAD DE UN GATO</h1>
+	<img class="img" src="gato.jpg">
+	<h2>¿CUANTOS AÑOS HUMANOS TIENE MI GATO?</h2>
+	<p class="parrafo">Calcular la edad real (medida en años humanos) de tu gato no siempre es sencillo, ya que el tiempo no pasa igual de rápido durante los primeros años de desarrollo que cuando el gato ya es adulto. El primer año de vida del gato, por ejemplo, equivale a 15 años de edad en humanos, mientras que el segundo año solo equivale a 10 años humanos. Cuando el gato es completamente adulto, sin embargo, cada año gatuno equivale a 4 años humanos.</p>
+	<h2>LA EDAD GATUNA:</h2>
+	<img src="gatos2.jpg" class="img2">
+	<h2>CALCULA LA EDAD DE TU GATO</h2>
+	<p class="parrafo">El funcionamiento es muy sencillo. Simplemente indica cuántos años reales tiene tu gato y dale a calcular. Inmediatamente convertiremos esa cantidad a años humanos. ¿fácil, no?</p>
+
+	<section>
+
+ <div class="containere"></div>
+  <form>
+    <div class="fila">
+      <div class="col-25">
+      <label>Edad Del Gato:</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="numero"/>
+		</div>
+    </div>
+   <div class="fila">
+      <div class="col-25">
+      <label>Genero De La Mascota:</label>
+      </div>
+      <div class="col-75">
+        <select name="pais">
+          <option>Macho</option>
+          <option>Hembra</option>
+          <div class="fila">
+      <div class="col50">
+
+      <input type="button" value="CALCULAR" onclick="edad()"/>
+      </div>
+        </div>
+         <div class="fila">
+      <div class="col50">
+      <div class="p" id="respuesta"></div>	
+      </div>
+        </div> 
+
+        </select>
+      </div>
+    </div>
+    
+    
+    </form>
+  </div>
+  </section>
+  <h2>MI AMADA MASCOTA SU NOMBRE ES "MIMI"</h2>
+
+		<img src="mimi.jpeg" class="mimi">
+<script type="text/javascript">
+	function edad() {
+		var numero= document.getElementById("numero").value;
+		var m=0;
+		if(numero==1){
+			m=15;
+		}else if(numero==2){
+			m=25;
+		}else if(numero==0){
+			numero=2
+		}else if(numero!=1 && numero!=2 && numero!=0){
+			var numero=numero-2;
+			var m=(numero*4)+25;
+		}
+	document.getElementById("respuesta").innerHTML ="<br> LA EDAD DEL GATO "+" ES: "+m+" EN AÑOS HUMANOS";
+}
+</script>
+	</article>
+<footer>
+    Derechos Reservados
+</footer>
+</body>
+</html>
+
+
+
